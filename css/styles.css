@@ -1,0 +1,149 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+.svg {
+    width: 30px;
+    height: 30px; 
+}
+ 
+li {
+    list-style: none;
+}
+/* ================================= 
+    Base Layout Styles
+  ==================================== */
+.grid-container {
+    display: grid;
+    grid-template-columns: 100% ;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header"
+    "navigation"
+    "main" ;
+}
+
+/*Header*/
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: #8E44AD;
+    color: white;
+    width: 100%;
+    padding: 1rem 1rem;
+    margin: 0;
+}
+
+.header-logo {
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.header-right {
+    display: flex;
+}
+
+.bell-icon {
+    margin-right: 1rem;
+}
+
+.pipe {
+    margin-right: 1rem;
+    font-size: 25px;
+}
+
+.header-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+}
+
+header h3 {
+    font-size: 18px;
+    align-self: center;
+}
+/*Navigation*/
+nav {
+    grid-area : navigation;
+    background-color: #5D3F6A;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+nav img {
+    display: inline-block;
+}
+/*Main*/
+main {
+    grid-area : main;
+    display: grid;
+    }
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.headline {
+  
+}
+
+.main-header-search {
+    margin-right: 1rem;
+}
+
+.widget-container-full, 
+.widget-container-half {
+    width : 95vw ;
+ }
+
+/* ================================= 
+    Media Queries
+  ==================================== */
+@media (min-width: 768px ) {
+    .grid-container {
+    grid-template-columns : 55px 1fr;
+    grid-template-areas :
+    "header header"
+    "navigation main" ;
+    }
+    main {
+        grid-template-columns : 50% ;
+    }
+    .traffic, 
+    .social {
+        grid-column : 1 / span 2 ;
+    }
+    .daily, 
+    .members, 
+    .message {
+        grid-column : 1 / span 1 ;
+    }
+    .widget-container-full {
+        width : 90vw ;
+        }
+    .widget-container-half {
+        width : 45vw ;
+    }
+}

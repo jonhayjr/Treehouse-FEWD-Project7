@@ -1,4 +1,13 @@
 /* ================================= 
+  variables
+==================================== */
+
+:root {
+    --background-primary: #7477bf;
+    --background-secondary: #4d4c72;
+  }
+
+/* ================================= 
   Base Element Styles
 ==================================== */
 * {
@@ -36,7 +45,7 @@ header {
     margin-top: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    background-color: #8E44AD;
+    background-color: var(--background-primary);
     color: white;
     width: 100%;
     padding: 1rem 1rem;
@@ -76,7 +85,7 @@ header h3 {
 /*Navigation*/
 nav {
     grid-area : navigation;
-    background-color: #5D3F6A;
+    background-color: var(--background-secondary);
     padding: 1rem;
     text-align: center;
     width: 100%;
@@ -101,17 +110,46 @@ main {
 .main-header {
     display: flex;
     justify-content: space-between;
-    padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
 .headline {
-  
+    padding: 1rem;
 }
 
 .main-header-search {
-    margin-right: 1rem;
+    background-color: lightgray;
+    padding: 1rem;
 }
+
+.main-header-searchbar {
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+    position: relative;
+}
+
+.main-header-search input {
+    padding: 5px;
+    display: block; 
+    border-radius: 5px 5px;  
+    width: 200px;
+    border: solid 0.5px black;
+}
+
+.main-header-search button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 10px;
+    z-index: 2;
+    outline: none;
+  }
+
 
 .widget-container-full, 
 .widget-container-half {

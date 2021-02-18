@@ -33,6 +33,12 @@ body {
 li {
     list-style: none;
 }
+
+.widget-container-full, 
+.widget-container-half {
+    width : 95vw ;
+ }
+
 /* ================================= 
     Base Layout Styles
   ==================================== */
@@ -174,18 +180,85 @@ main {
     padding-right: 0.25rem;
     font-size: 10px;
 }
-/*Placeholder image for chart.js*/
+/*Placeholder image line graph js*/
 .linegraph-placeholder {
     width: 100%;
-    height: auto;
     padding: 1rem;
     border-bottom: solid 1px lightgray;
 }
 
-.widget-container-full, 
-.widget-container-half {
-    width : 95vw ;
- }
+/*Daily Traffic*/
+.daily-header {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+/*Placeholder image bar graph js*/
+.bargraph-placeholder {
+    width: 100%;
+    padding: 1rem;
+    border-bottom: solid 1px lightgray;
+}
+
+/*Mobile Users*/
+.mobile-header {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+/*Placeholder image piechart js*/
+.piechart-placeholder {
+    width: 100%;
+    padding: 1rem;
+    border-bottom: solid 1px lightgray;
+}
+
+/*Social Stats*/
+.social {
+    text-align: center;
+}
+
+.social-container {
+    border: solid 1px lightgrey;
+    background-color: rgba(211, 211, 211, 0.329);
+    padding: 1rem;
+    width: 65%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.social-header {
+    padding: 0.5rem 0;
+}
+
+.social-image {
+    padding: 1rem;
+    background-color: var(--background-primary);
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.social-image .svg {
+    height: 40px;
+    width: 40px;
+    margin: auto;
+    vertical-align: middle;
+}
+
+.social-text {
+    vertical-align: middle;
+    padding-top: 1rem;
+}
+
+.platform {
+    color: var(--background-primary);
+}
+
+.stat {
+    font-size: 30px;
+}
 
 /* ================================= 
     Media Queries

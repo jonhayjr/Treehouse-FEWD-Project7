@@ -16,6 +16,15 @@
     padding: 0;
   }
 
+html, 
+body {
+    margin: 0;
+}
+
+body {
+    width: 100%;
+}
+
 .svg {
     width: 20px;
     height: 30px; 
@@ -42,14 +51,11 @@ header {
     grid-area: header;
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
     background-color: var(--background-primary);
     color: white;
     width: 100%;
-    padding: 1rem 1rem;
-    margin: 0;
+    padding: 1rem;
+
 }
 
 .header-logo {
@@ -101,12 +107,14 @@ nav a {
 nav img {
     display: inline-block;
 }
+
 /*Main*/
 main {
     grid-area : main;
-    display: grid;
-    }
+    width: 100%;
+}
 
+/*Dashboard*/
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -120,20 +128,21 @@ main {
 .main-header-search {
     background-color: lightgray;
     padding: 1rem;
+    padding
 }
 
 .main-header-searchbar {
-    margin-right: 1rem;
-    margin-left: 0.5rem;
     position: relative;
+    padding-left: 1rem;
 }
 
 .main-header-search input {
-    padding: 5px;
+    padding: 0.3rem;
     display: block; 
     border-radius: 5px 5px;  
-    width: 200px;
-    border: solid 0.5px black;
+    width: 100%;
+    border: solid 0.5px black; 
+    align-self:flex-end
 }
 
 .main-header-search button {
@@ -150,6 +159,28 @@ main {
     outline: none;
   }
 
+/*Traffic Graph*/
+.traffic {
+    padding: 0.5rem;
+}
+
+.traffic-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.traffic-nav li {
+    display: inline;
+    padding-right: 0.25rem;
+    font-size: 10px;
+}
+/*Placeholder image for chart.js*/
+.linegraph-placeholder {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    border-bottom: solid 1px lightgray;
+}
 
 .widget-container-full, 
 .widget-container-half {

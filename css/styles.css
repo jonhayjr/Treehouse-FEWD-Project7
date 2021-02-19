@@ -5,6 +5,7 @@
 :root {
     --background-primary: #7477bf;
     --background-secondary: #4d4c72;
+    --transition-standard: all 0.75s ease-in-out;
   }
 
 /* ================================= 
@@ -23,6 +24,7 @@ body {
 
 body {
     width: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 .svg {
@@ -42,6 +44,52 @@ li {
  a {
      text-decoration: none;
  }
+
+ .button-primary, 
+ .button-disabled {
+    border: none;
+    padding: 0.5rem;
+    color: white;
+    border-radius: 5px 5px;
+    width: 100px;
+ }
+
+.button-primary {
+    background-color: var(--background-primary);
+    border: solid 1px transparent;
+    transition: var(----transition-standard);
+}
+
+.button-primary:hover {
+    background-color: white;
+    color: var(--background-primary);
+    border: solid 1px var(--background-primary);
+}
+
+.button-disabled {
+    background-color: rgba(112, 128, 144, 0.712);
+    border: solid 1px transparent;
+    transition: var(----transition-standard);
+}
+
+.button-disabled:hover {
+    background-color: white;
+    color: rgba(112, 128, 144, 0.712);
+    border: solid 1px rgba(112, 128, 144, 0.712);
+}
+
+.form-field,
+.form-area {
+    margin-bottom: 1rem; 
+    border-radius: 5px 5px;
+    background-color: rgba(211, 211, 211, 0.301); 
+}
+
+button, 
+span,
+h3 {
+    text-transform: uppercase;
+}
 
 /* ================================= 
     Base Layout Styles
@@ -97,6 +145,7 @@ header {
 header h3 {
     font-size: 18px;
     align-self: center;
+    text-transform: none;
 }
 /*Navigation*/
 nav {
@@ -170,10 +219,6 @@ main {
   }
 
 /*Traffic Graph*/
-.traffic {
-    padding: 0.5rem;
-}
-
 .traffic-header {
     display: flex;
     justify-content: space-between;
@@ -181,6 +226,7 @@ main {
 
 .traffic-heading {
     padding: 0.5rem;
+    text-align: left;
 }
 
 .traffic-nav li {
@@ -198,6 +244,7 @@ main {
 /*Daily Traffic*/
 .daily-heading {
     padding: 0.5rem;
+    text-align: left;
 }
 
 /*Placeholder image bar graph js*/
@@ -210,6 +257,7 @@ main {
 /*Mobile Users*/
 .mobile-heading {
     padding: 0.5rem;
+    text-align: left;
 }
 
 /*Placeholder image piechart js*/
@@ -227,7 +275,7 @@ main {
 .social-container {
     border: solid 1px lightgrey;
     background-color: rgba(211, 211, 211, 0.329);
-    padding: 1rem;
+    padding: 2rem;
     width: 65%;
     margin: 1rem auto;
     display: flex;
@@ -271,9 +319,11 @@ main {
 .members {
     text-align: center;
     padding-top: 1rem;
+    border-top: solid 1px lightgray;
 }
 
-.members-heading {
+.members-heading,
+.recent-activity-heading {
     text-align: left;
     padding: 1rem;
 }
@@ -297,6 +347,115 @@ main {
     padding: 0.5rem;
     font-size: 16px;
 }
+
+.recent-activity-heading {
+    border-top: solid 1px lightgray;
+}
+
+/*Message*/
+.message {
+    border-top: solid 1px lightgray;
+}
+
+.message-heading {
+    padding: 1rem;
+    text-align: left;
+}
+
+.widget-container {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+    padding-bottom: 2rem;
+}
+
+.message .form-field,
+.message .form-area {
+    padding: 0.5rem;
+}
+
+.message .form-area  {
+    height: 100px;
+}
+
+.message .button-primary {
+    width: 100%;
+}
+
+/*Settings*/
+.settings {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: solid 1px lightgray;
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-heading {
+    padding: 1rem;
+    text-align: left;
+}
+
+.settings .form-field {
+    width: 75%;
+    margin: 1rem auto;
+    padding: 0.25rem;
+}
+
+.form-field,
+.form-area {
+    margin-bottom: 1rem; 
+    border-radius: 5px 5px;
+    background-color: rgba(211, 211, 211, 0.301); 
+}
+
+.settings-button {
+    margin: auto;
+}
+
+.button-primary {
+    margin-right: 0.7rem;
+}
+
+.switch-light {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.switch-option {
+    width: 100px;
+    text-align: center;
+    margin: auto;
+}
+
+.switch-light-label {
+    padding-top: 0.5rem;
+    width: 300px;
+    margin: auto;
+    padding-bottom: 0.5rem;
+}
+
+.switch-candy a {
+    background-color: var(--background-primary);
+    color: white;
+}
+
+.switch-light.switch-candy input ~ span span:first-child, 
+.switch-light.switch-candy input:checked ~ span span:nth-child(2), 
+.switch-candy input:checked + label {
+    color: white;
+}
+
+.switch-light.switch-candy span span, 
+.switch-light.switch-candy input:checked ~ span span:first-child, 
+.switch-toggle.switch-candy label  {
+
+}
+
 
 /* ================================= 
     Media Queries

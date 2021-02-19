@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/toggle-switch.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Web App</title>
@@ -186,7 +188,7 @@
                 <p>02/16/21</p>
             </div>
         <!-- Recent Activity -->
-        <h3>Recent Activity</h3>
+        <h3 class="recent-activity-heading">Recent Activity</h3>
         <div class="members-container">
             <img src="images/member-1.jpg"
             class="profile-image">
@@ -222,22 +224,47 @@
         </section>
         <!-- messaging widget -->
         <section class="message">
-            <h3>Message User</h3>
+            <h3 class="message-heading">MESSAGE USER</h3>
             <form class="widget-container">
                 <input type="text" placeholder="Search for user"
                 class="form-field" id="userField">
                 <textarea placeholder="Message for user" class="form-area"
                 id= "messageField" ></textarea>
-                <button class="button-primary" id="send" >Send</button>
+                <button class="button-primary" id="send">Send</button>
             </form>
         </section>
         <!-- local settings widget -->
         <section class="settings">
-            <h3>Settings</h3>
+            <h3 class="settings-heading">Settings</h3>
             <!-- custom CSS toggle code-->
+            <label class="switch-light switch-candy" onclick="">
+                <input type="checkbox">
+              <strong>
+                <p class="switch-light-label">Send Email Notification</p>
+                </strong>
+                <span class="switch-option">
+                  <span>ON</span>
+                  <span>OFF</span>
+                  <a></a>
+                </span>
+              </label>
             <!-- custom CSS toggle code-->
+            <label class="switch-light switch-candy" onclick="">
+                <input type="checkbox">
+              <strong>
+                <p class="switch-light-label">Set Profile To Public</p>
+                </strong>
+                <span class="switch-option">
+                  <span>On</span>
+                  <span>Off</span>
+                  <a></a>
+                </span>
+              </label>
+
             <select class="form-field" id="timezone">
                 <option disabled selected>Select a Timezone</option>
+                <option>Western</option>
+                <option>Central</option>
                 <option>Eastern</option>
                 <!-- more options -->
             </select>

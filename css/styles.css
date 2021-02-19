@@ -336,7 +336,6 @@ main {
 .member-activity {
     text-align: center;
     padding-top: 1rem;
-    border-top: solid 1px lightgray;
 }
 
 .members-heading,
@@ -562,6 +561,10 @@ footer a:visited {
     }
 
     /*Social*/
+    .social {
+        border-bottom: solid 1px lightgray;
+    }
+
     .social-containers {
         display: flex;
         justify-content: space-between;
@@ -586,6 +589,16 @@ footer a:visited {
     .stat {
         font-size: 25px;
     }
+
+    /*Members*/
+    .recent-activity-heading {
+        border-top: solid 1px transparent;
+    }
+
+    .members {
+        border-top: solid 1px transparent;
+    }
+
     footer {
         display: none;
     }

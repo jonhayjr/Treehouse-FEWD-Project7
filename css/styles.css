@@ -91,6 +91,19 @@ h3 {
     text-transform: uppercase;
 }
 
+input,
+textarea,
+select {
+    outline-color: none;
+    border: solid 2px lightgrey;
+    transition: var(--transition-standard);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline-color: black;
+}
 /* ================================= 
     Base Layout Styles
   ==================================== */
@@ -187,7 +200,6 @@ main {
 .main-header-search {
     background-color: lightgray;
     padding: 1rem;
-    padding
 }
 
 .main-header-searchbar {
@@ -200,8 +212,8 @@ main {
     display: block; 
     border-radius: 5px 5px;  
     width: 100%;
-    border: solid 0.5px black; 
-    align-self:flex-end
+    align-self:flex-end;
+    border: solid 2px rgba(14, 13, 13, 0.431);
 }
 
 .main-header-search button {
@@ -317,6 +329,11 @@ main {
 
 /*Members*/
 .members {
+    border-top: solid 1px lightgray;
+}
+
+.members,
+.member-activity {
     text-align: center;
     padding-top: 1rem;
     border-top: solid 1px lightgray;
@@ -463,15 +480,67 @@ footer a:visited {
     Media Queries
   ==================================== */
 @media (min-width: 768px ) {
-    .grid-container {
+.grid-container {
     grid-template-columns : 55px 1fr;
     grid-template-areas :
     "header header"
     "navigation main" ;
     }
+
     main {
-        grid-template-columns : 50% ;
+        grid-template-columns : 50%;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "dashboard dashboard"
+        "alert alert"
+        "traffic traffic"
+        "daily mobile"
+        "social social" 
+        "members activity"
+        "message settings"
+        ;
     }
+    .main-header {
+        grid-area: dashboard;
+    }
+
+    .alert {
+        grid-area: alert;
+    }
+
+    .traffic {
+        grid-area: traffic;
+    }
+
+    .daily {
+        grid-area: daily;
+    }
+
+    .mobile {
+        grid-area: mobile;
+    }
+
+    .social {
+        grid-area: social;
+    }
+
+    .members {
+        grid-area: members;
+    }
+
+    .member-activity {
+        grid-area: activity;
+    }
+
+    .message {
+        grid-area: message;
+    }
+
+    .settings {
+        grid-area: settings;
+    }
+
     .traffic, 
     .social {
         grid-column : 1 / span 2 ;
@@ -480,14 +549,43 @@ footer a:visited {
     .members, 
     .message {
         grid-column : 1 / span 1 ;
-    }
+    } 
     .widget-container-full {
         width : 90vw ;
         }
     .widget-container-half {
         width : 45vw ;
     }
+    /*Dashboard*/
+    .main-header-search {
+        flex: 1;
+    }
 
+    /*Social*/
+    .social-containers {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .social-container {
+        height: auto;
+        padding: 0.75rem;
+        flex-basis: auto;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .social-image {
+        height: 65px;
+    }
+
+    .social-text {
+        padding-left: 1rem;
+    }
+
+    .stat {
+        font-size: 25px;
+    }
     footer {
         display: none;
     }

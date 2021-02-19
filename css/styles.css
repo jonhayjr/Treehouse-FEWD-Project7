@@ -57,7 +57,7 @@ li {
 .button-primary {
     background-color: var(--background-primary);
     border: solid 1px transparent;
-    transition: var(----transition-standard);
+    transition: var(--transition-standard);
 }
 
 .button-primary:hover {
@@ -69,7 +69,7 @@ li {
 .button-disabled {
     background-color: rgba(112, 128, 144, 0.712);
     border: solid 1px transparent;
-    transition: var(----transition-standard);
+    transition: var(--transition-standard);
 }
 
 .button-disabled:hover {
@@ -411,6 +411,7 @@ main {
 }
 
 .settings-button {
+    padding-top: 1rem;
     margin: auto;
 }
 
@@ -418,42 +419,43 @@ main {
     margin-right: 0.7rem;
 }
 
-.switch-light {
+.toggle-switch {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 1rem;
-    text-align: center;
-}
-
-.switch-option {
-    width: 100px;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
     margin: auto;
+    margin-bottom: 1rem;
 }
 
 .switch-light-label {
-    padding-top: 0.5rem;
-    width: 300px;
-    margin: auto;
-    padding-bottom: 0.5rem;
+    margin: 0;
+    padding: 0;
+    width: 200px;
 }
 
-.switch-candy a {
+.onoffswitch {
+    margin-left: 2rem;
+}
+
+/*Footer*/
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: white;
     background-color: var(--background-primary);
-    color: white;
+    margin-top: 1rem;
+    text-transform: uppercase;
 }
 
-.switch-light.switch-candy input ~ span span:first-child, 
-.switch-light.switch-candy input:checked ~ span span:nth-child(2), 
-.switch-candy input:checked + label {
-    color: white;
+footer a {
+    transition: var(--transition-standard);
+    text-shadow: 0px 0px 7px transparent;
 }
 
-.switch-light.switch-candy span span, 
-.switch-light.switch-candy input:checked ~ span span:first-child, 
-.switch-toggle.switch-candy label  {
-
+footer a:hover,
+footer a:visited {
+    color: rgba(255, 255, 255, 0.753);
+	text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.281);
 }
 
 
@@ -484,5 +486,9 @@ main {
         }
     .widget-container-half {
         width : 45vw ;
+    }
+
+    footer {
+        display: none;
     }
 }

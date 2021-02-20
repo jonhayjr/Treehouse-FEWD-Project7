@@ -231,6 +231,10 @@ main {
   }
 
 /*Traffic Graph*/
+.traffic {
+    padding-bottom: 1rem;
+}
+
 .traffic-header {
     display: flex;
     justify-content: space-between;
@@ -243,17 +247,23 @@ main {
 
 .traffic-nav li {
     display: inline;
-    padding-right: 0.25rem;
+    padding-right: 0.5rem;
     font-size: 10px;
 }
 /*Placeholder image line graph js*/
 .linegraph-placeholder {
     width: 100%;
     padding: 1rem;
-    border-bottom: solid 1px lightgray;
 }
 
 /*Daily Traffic*/
+.daily {
+    border-top: solid 1px lightgray; 
+    border-bottom: solid 1px lightgray; 
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 .daily-heading {
     padding: 0.5rem;
     text-align: left;
@@ -263,10 +273,13 @@ main {
 .bargraph-placeholder {
     width: 100%;
     padding: 1rem;
-    border-bottom: solid 1px lightgray;
 }
 
 /*Mobile Users*/
+.mobile {
+    padding-top: 1rem;
+}
+
 .mobile-heading {
     padding: 0.5rem;
     text-align: left;
@@ -276,12 +289,15 @@ main {
 .piechart-placeholder {
     width: 100%;
     padding: 1rem;
-    border-bottom: solid 1px lightgray;
 }
 
 /*Social Stats*/
 .social {
     text-align: center;
+    border-top: solid 1px lightgray; 
+    border-bottom: solid 1px lightgray; 
+    padding-bottom: 1rem;
+    padding-top: 1rem;
 }
 
 .social-container {
@@ -328,14 +344,11 @@ main {
 }
 
 /*Members*/
-.members {
-    border-top: solid 1px lightgray;
-}
-
 .members,
 .member-activity {
     text-align: center;
     padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .members-heading,
@@ -364,13 +377,14 @@ main {
     font-size: 16px;
 }
 
-.recent-activity-heading {
-    border-top: solid 1px lightgray;
+.member-activity {
+    border-top: solid 1px lightgray; 
 }
 
 /*Message*/
 .message {
-    border-top: solid 1px lightgray;
+    border-top: solid 1px lightgray; 
+    padding-top: 1rem;
 }
 
 .message-heading {
@@ -560,9 +574,28 @@ footer a:visited {
         flex: 1;
     }
 
+    /*Traffic */
+    .traffic-nav li {
+        font-size: 18px;
+        padding-right: 1rem;
+    }
+
+    .daily,
+    .mobile {
+        padding-left: 1rem;
+        border-top: solid 1px lightgray;
+        border-bottom: solid 1px lightgray;
+    }
+
+    .daily {
+        border-right: solid 1px lightgray;
+    }
+
     /*Social*/
     .social {
-        border-bottom: solid 1px lightgray;
+        border-top: solid 1px transparent;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
     .social-containers {
@@ -591,14 +624,36 @@ footer a:visited {
     }
 
     /*Members*/
-    .recent-activity-heading {
+    .members,
+    .member-activity {
+        padding-left: 1rem;
+    }
+
+    .member-activity {
         border-top: solid 1px transparent;
     }
 
     .members {
-        border-top: solid 1px transparent;
+        border-right: solid 1px lightgray;
     }
 
+    .members-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /*Message*/
+  .message {
+      border-right: solid 1px lightgray;
+    }
+
+   .settings-heading,
+   .message-heading {
+       padding-bottom: 2rem;
+   }
+
+    /*Footer*/
     footer {
         display: none;
     }

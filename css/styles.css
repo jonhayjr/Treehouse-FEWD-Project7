@@ -569,6 +569,8 @@ footer a:visited {
     .widget-container-half {
         width : 45vw ;
     }
+
+    /*Nav*/ 
     /*Dashboard*/
     .main-header-search {
         flex: 1;
@@ -644,19 +646,23 @@ footer a:visited {
         flex-wrap: wrap;
     }
 
+    .members-text {
+        align-self: center;
+    }
 
     .profile-image {
         margin: 0;
         width: 50px;
         height: 50px;
         margin-right: 1rem;
+        align-self: center;
     }
 
     .dateTime {
         margin-left: auto;
         order: 2;
-        padding-right: 0.5rem;
-        padding-top: 1.5rem;
+        padding-right: 0.5rem; 
+        align-self: center;
     }
 
   

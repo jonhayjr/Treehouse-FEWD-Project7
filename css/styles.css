@@ -367,7 +367,7 @@ main {
 
 .members-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1rem;
     flex-direction: column;
 }
@@ -379,16 +379,14 @@ main {
     margin: auto;
 }
 
+.profile-image, 
 .members-text,
-.member-container p {
-    padding: 0.5rem;
-    font-size: 16px;
-    width: 75%;
-    margin: auto;
-    line-height: 1.5;
+.dateTime {
+    align-self: center;
 }
 
-.member-activity .members-text {
+.members-text {
+    padding: 0.5rem;
     font-size: 16px;
     width: 75%;
     margin: auto;
@@ -406,6 +404,15 @@ main {
  .members-text a {
     color: var(--background-primary);
  }
+
+ .icon-chevron-right {
+    display: none;
+ }
+
+ .arrow {
+    fill: var(--background-primary);
+ }
+
 /*Message*/
 .message {
     border-top: solid 1px lightgray; 
@@ -669,12 +676,27 @@ footer a:visited {
     .members,
     .member-activity {
         padding-left: 0.5rem;
-        width: 50%;
+        width: 100%;
         text-align: left;
+        padding-right: 2rem;
+    }
+
+    .members-text {
+        padding: 0;
+        font-size: 11px;
+        width: 100%;
+        margin: 0;
+        line-height: 1;
+        min-width: 300px;
+    }
+
+    .dateTime {
+        font-size: 11px;
     }
 
     .member-activity {
         border-top: solid 1px transparent;
+        padding-left: 1rem;
     }
 
     .members {
@@ -683,23 +705,16 @@ footer a:visited {
 
     .members-container {
         flex-direction: row;
-        justify-content: center;
-        align-content: center;
         text-align: left;
+        padding-bottom: 1rem;
+        border-bottom: solid 1px lightgray;
+        height: 100px;
     }
 
-    .members .members-text,
-    .dateTime,
-    .member-activity .members-text {
-        font-size: 13px;
-        line-height: 0.5;
-        margin-left: 0;
-        padding-left: 0;
+    .members-container:last-child {
+        border-bottom: solid 1px transparent;
     }
 
-    .dateTime {
-        font-size: 12px;
-    }
 
     .profile-image {
         margin: 0;
@@ -707,9 +722,11 @@ footer a:visited {
         height: 40px;
         margin-right: 0.5rem;
     }
+  
 
-
-
+    .icon-chevron-right {
+        display: block;
+     }
 
 /*Message*/
   .message {
@@ -719,7 +736,6 @@ footer a:visited {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
-      height: 25vh;
     }
 
     .widget-container {
@@ -760,7 +776,6 @@ footer a:visited {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 25vh;
 }
 
     .settings-heading {
@@ -793,4 +808,11 @@ footer a:visited {
     footer {
         display: none;
     }
+}
+
+@media (min-width: 1024px ) {
+
+
+
+
 }

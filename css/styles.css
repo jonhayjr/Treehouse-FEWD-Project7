@@ -621,7 +621,7 @@ footer a:visited {
         grid-column : 1 / span 1 ;
     } 
     .widget-container-full {
-        width: 150vw;
+        width: 125vw;
         margin-left: 1rem;
     }
 

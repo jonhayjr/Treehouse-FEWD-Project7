@@ -38,7 +38,7 @@ li {
 
 .widget-container-full, 
 .widget-container-half {
-    width : 95vw ;
+    width: 95vw;
  }
 
  a {
@@ -278,11 +278,11 @@ main {
     padding-right: 0.5rem;
     font-size: 10px;
 }
-/*Placeholder image line graph js*/
-.linegraph-placeholder {
-    width: 100%;
-    padding: 1rem;
+
+.widget-container-full {
+    margin-top: 0.5rem;
 }
+
 
 /*Daily Traffic*/
 .daily {
@@ -621,10 +621,12 @@ footer a:visited {
         grid-column : 1 / span 1 ;
     } 
     .widget-container-full {
-        width : 90vw ;
-        }
+        width: 150vw;
+        margin-left: 1rem;
+    }
+
     .widget-container-half {
-        width : 45vw ;
+        width: 45vw ;
     }
 
     /*Nav*/ 

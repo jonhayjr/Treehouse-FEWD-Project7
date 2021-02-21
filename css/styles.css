@@ -687,7 +687,7 @@ footer a:visited {
         width: 100%;
         margin: 0;
         line-height: 1;
-        min-width: 300px;
+        width: 300px;
     }
 
     .dateTime {
@@ -811,7 +811,14 @@ footer a:visited {
 }
 
 @media (min-width: 1024px ) {
+.members-text,
+.dateTime {
+    font-size: 15px;
+}
 
+.members-text {
+    width: 500px;
+}
 
 
 

@@ -766,7 +766,7 @@ footer a:visited {
     .settings .form-field {
     width: 100%;
     margin-left: 0;
-    margin-bottom: 0;
+    margin-bottom: 0.35rem;
     margin-top: 0;
  }
 

@@ -256,6 +256,7 @@ main {
 
 .alert-banner-close {
     margin-left: auto;
+    cursor: pointer;
 }
 
 /*Traffic Graph*/
@@ -297,11 +298,6 @@ main {
     text-align: left;
 }
 
-/*Placeholder image bar graph js*/
-.bargraph-placeholder {
-    width: 100%;
-    padding: 1rem;
-}
 
 /*Mobile Users*/
 .mobile {
@@ -313,10 +309,8 @@ main {
     text-align: left;
 }
 
-/*Placeholder image piechart js*/
-.piechart-placeholder {
-    width: 100%;
-    padding: 1rem;
+.widget-container-half{
+    margin: 1rem;
 }
 
 /*Social Stats*/
@@ -626,9 +620,9 @@ footer a:visited {
     }
 
     .widget-container-half {
-        width: 45vw ;
+        width: 50vw;
     }
-
+    
     /*Nav*/ 
     nav {
         padding: 0;

@@ -151,6 +151,11 @@ header {
     margin-right: 1rem;
 }
 
+.alert-notification {
+    fill: #79c44d;
+    stroke-width: 500;
+}
+
 .pipe {
     margin-right: 1rem;
     font-size: 25px;

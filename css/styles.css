@@ -687,7 +687,7 @@ footer a:visited {
         width: 100%;
         margin: 0;
         line-height: 1;
-        width: 300px;
+        width: 350px;
     }
 
     .dateTime {
@@ -819,7 +819,4 @@ footer a:visited {
 .members-text {
     width: 500px;
 }
-
-
-
 }

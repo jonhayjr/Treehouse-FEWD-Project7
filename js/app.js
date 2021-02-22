@@ -136,3 +136,20 @@ send.addEventListener('click', () => {
     alert(`Message successfully sent to: ${user.value}`);
     }
     });
+
+//Notification dropdown   
+const notificationDropdown = document.querySelector('.notification-dropdown');
+const notificationBell = document.querySelector('#notification-bell')
+
+
+function showNotifications(event) {
+    if (event.target.id === 'notification-bell') {
+        notificationDropdown.classList.toggle('show');
+    } else {
+        notificationDropdown.classList.remove('show');
+    }
+}
+
+window.addEventListener ('mouseover', showNotifications);
+
+

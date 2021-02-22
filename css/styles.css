@@ -149,6 +149,37 @@ header {
 
 .bell-icon {
     margin-right: 1rem;
+    transition: var(--transition-standard);
+}
+
+.bell-icon:hover {
+    -webkit-filter: invert(0.5) sepia(1);
+    filter: invert(0.5) sepia(1);
+    cursor: pointer;
+}
+
+.notifications {
+    position: relative;
+    display: block;
+}
+
+.notification-dropdown {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    min-width: 160px;
+    background-color: white;
+    border: solid 2px var(--background-primary);
+}
+
+.notification-dropdown li {
+    padding: 0.5rem;
+    display: block;
+    color: black;
+}
+
+.show {
+    display: block;
 }
 
 .alert-notification {
@@ -845,4 +876,5 @@ footer a:visited {
 .members-text {
     width: 500px;
 }
+}  
 }

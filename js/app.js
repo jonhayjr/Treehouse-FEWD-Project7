@@ -208,26 +208,46 @@ const userField = document.getElementById('userField');
 const userName = document.querySelectorAll('.member-name');
 const autocompleteDropdown = document.querySelector('.autocomplete-dropdown'); 
 const autocompleteDropdownList = document.querySelectorAll('.autocomplete-dropdown-li');   
-const dropdownArray = [];
+let dropdownArray = [];
 
 
 function autocompleteUserName() {
     let inputValue = userField.value;
+    console.log(inputValue);
     for (let i = 0; i < userName.length; i++) {
-        let nameValue = userName[i].innerText.toLowerCase();  
-        if (nameValue.includes(inputValue.toLowerCase()) && !dropdownArray.includes(nameValue.toLowerCase())) {
-            console.log(nameValue);
+        let inputValueLC = inputValue.toLowerCase();
+        let nameValue = userName[i].innerText;
+        let nameValueLC = userName[i].innerText.toLowerCase();  
+        console.log(nameValueLC);
+        console.log(nameValueLC.includes(inputValueLC));
+        if (nameValueLC.includes(inputValueLC) && inputValue !== '') {
             createNameItem(nameValue);
-        }
+        } else if (!nameValueLC.includes(inputValueLC)) {
+            removeNameItem(nameValue);
+        } 
     }
 }
 
 function createNameItem(item) {
-    const li = document.createElement('li');
-    li.innerHTML = `<strong>${item}</strong>`;
-    li.classList.add('autocomplete-dropdown-li');
-    dropdownArray.push(item);
-    autocompleteDropdown.appendChild(li);
+    if (!dropdownArray.includes(item)) {
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${item}</strong>`;
+        li.classList.add('autocomplete-dropdown-li');
+        dropdownArray.push(item);
+        autocompleteDropdown.appendChild(li);
+    }
+}
+
+function removeNameItem(item) {
+    const autocompleteDropdownList = document.querySelectorAll('.autocomplete-dropdown-li'); 
+    for (let i = 0; i < autocompleteDropdownList.length; i++) {
+        let li = autocompleteDropdownList[i];
+        let liText = autocompleteDropdownList[i].innerText;
+        if (!liText.includes(item)) {
+            dropdownArray.pop(item);
+            autocompleteDropdown.removeChild(li)
+        }
+    }
 }
 
 userField.addEventListener('keyup', autocompleteUserName);

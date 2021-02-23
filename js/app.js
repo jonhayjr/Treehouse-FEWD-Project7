@@ -203,3 +203,31 @@ function showNotifications(event) {
 
 window.addEventListener ('click', showNotifications);
 
+//User Search Logic  
+const userField = document.getElementById('userField');
+const userName = document.querySelectorAll('.member-name');
+const autocompleteDropdown = document.querySelector('.autocomplete-dropdown'); 
+const autocompleteDropdownList = document.querySelectorAll('.autocomplete-dropdown-li');   
+const dropdownArray = [];
+
+
+function autocompleteUserName() {
+    let inputValue = userField.value;
+    for (let i = 0; i < userName.length; i++) {
+        let nameValue = userName[i].innerText.toLowerCase();  
+        if (nameValue.includes(inputValue.toLowerCase()) && !dropdownArray.includes(nameValue.toLowerCase())) {
+            console.log(nameValue);
+            createNameItem(nameValue);
+        }
+    }
+}
+
+function createNameItem(item) {
+    const li = document.createElement('li');
+    li.innerHTML = `<strong>${item}</strong>`;
+    li.classList.add('autocomplete-dropdown-li');
+    dropdownArray.push(item);
+    autocompleteDropdown.appendChild(li);
+}
+
+userField.addEventListener('keyup', autocompleteUserName);

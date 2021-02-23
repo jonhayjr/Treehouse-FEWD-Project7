@@ -169,7 +169,7 @@
                 <img src="images/member-1.jpg"
                 class="profile-image">
                 <div class="members-text">
-                    <p>Victoria Chambers</p>
+                    <p class="member-name">Victoria Chambers</p>
                     <a href="#">victoria.chambers80@example.com</a>
                 </div>
                 <p class="dateTime">02/16/21</p>
@@ -178,7 +178,7 @@
                 <img src="images/member-2.jpg"
                 class="profile-image">
                 <div class="members-text">
-                    <p>Dale Byrd</p>
+                    <p class="member-name">Dale Byrd</p>
                     <a href="#">dale.bryd52@example.com</a>
                 </div>
                 <p class="dateTime">02/15/21</p>
@@ -187,7 +187,7 @@
                 <img src="images/member-3.jpg"
                 class="profile-image">
                 <div class="members-text">
-                    <p>Dawn Wood</p>
+                    <p class="member-name">Dawn Wood</p>
                     <a href="#">dawn.wood16@example.com</a>
                 </div>
                 <p class="dateTime">02/15/21</p>
@@ -196,7 +196,7 @@
                 <img src="images/member-4.jpg"
                 class="profile-image">
                 <div class="members-text">
-                    <p>Dan Oliver</p>
+                    <p class="member-name">Dan Oliver</p>
                     <a href="#">dan.oliver82@example.com</a>
                 </div>
                 <p class="dateTime">02/16/21</p>
@@ -252,9 +252,13 @@
         <!-- messaging widget -->
         <section class="message">
             <h3 class="message-heading">Message User</h3>
-            <form class="widget-container">
+            <form class="widget-container" autocomplete="off">
                 <input type="text" placeholder="Search for user"
                 class="form-field" id="userField">
+                <div class="autocomplete"> 
+                    <ul class="autocomplete-dropdown">
+                    </ul>
+                </div>
                 <textarea placeholder="Message for user" class="form-area"
                 id= "messageField" ></textarea>
                 <button class="button-primary" id="send">Send</button>

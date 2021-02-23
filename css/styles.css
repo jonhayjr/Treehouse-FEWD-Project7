@@ -312,13 +312,20 @@ main {
 }
 
 .traffic-nav li {
-    display: inline;
-    padding-right: 0.5rem;
+    display: inline-block;
+    padding: 0.5rem;
     font-size: 10px;
+    transition: var(--transition-standard);
 }
 
 .widget-container-full {
     margin-top: 0.5rem;
+}
+
+.active {
+    background-color: rgba(0, 128, 0, 0.603);
+    border-radius: 15px 15px;
+    color: white;
 }
 
 
@@ -692,7 +699,6 @@ footer a:visited {
     /*Traffic */
     .traffic-nav li {
         font-size: 18px;
-        padding-right: 1rem;
     }
 
     .daily,

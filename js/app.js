@@ -19,6 +19,16 @@ alertBanner.addEventListener('click', e => {
 
 //Traffic Chart  
 const trafficCanvas = document.querySelector('#traffic-chart');
+const hourlyTraffic = [150, 300, 350, 500, 300, 400, 300, 450, 650, 300,
+    2500];
+ const dailyTraffic = [350, 650, 500, 1000, 750, 950, 600, 900, 1100, 750,
+    1500];
+const weeklyTraffic = [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
+    2500];
+
+const monthlyTraffic = [1000, 2100, 1200, 2300, 1700, 1890, 1500, 2000, 2200, 1760,
+        2500];
+const trafficNav = document.querySelector('.traffic-nav');
 
 let trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
@@ -54,6 +64,47 @@ let trafficChart = new Chart(trafficCanvas, {
     options: trafficOptions
     });
 
+//Update Traffic Chart Based on User Selection
+function updateTrafficFrequency(frequency) {
+        if (frequency === 'Hourly') {
+            trafficData.datasets[0].data = hourlyTraffic;
+        } else if (frequency === 'Daily') {
+            trafficData.datasets[0].data = dailyTraffic;
+        } else if (frequency === 'Weekly') {
+            trafficData.datasets[0].data = weeklyTraffic;
+        } else if (frequency === 'Monthly') {
+            trafficData.datasets[0].data = monthlyTraffic;
+        }
+    
+        trafficChart = new Chart(trafficCanvas, {
+            type: 'line',
+            data: trafficData,
+            options: trafficOptions
+            });
+}
+
+function addActiveClass(element) {
+    const currentActive = document.querySelector('.active');
+    //Remove Active Class 
+    currentActive.classList.remove('active');
+    //Add Class To Current Item  
+    element.classList.toggle('active'); 
+}
+
+//Grab User Selection
+function selectTrafficFrequency(event) {
+    const element = event.target;
+    const classList = event.target.classList.value;
+    if (classList.includes('traffic-nav-link')) {
+        let frequency = event.target.innerText;
+        //Add Active Class
+        addActiveClass(element);
+        //Update Chart
+        updateTrafficFrequency(frequency);
+    }
+}
+
+trafficNav.addEventListener('click', selectTrafficFrequency);
 //Daily Chart  
 const dailyCanvas = document.getElementById("daily-chart");
 

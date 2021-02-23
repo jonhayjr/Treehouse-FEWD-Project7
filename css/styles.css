@@ -168,14 +168,15 @@ header {
     position: absolute;
     z-index: 3;
     min-width: 160px;
-    background-color: white;
-    border: solid 2px var(--background-primary);
+    background-color: var(--background-primary);
+    border: solid 3px white;
 }
 
 .notification-dropdown li {
     padding: 0.5rem;
     display: block;
-    color: black;
+    color: white;
+    border: solid 1px white;
 }
 
 .show {
@@ -681,6 +682,13 @@ footer a:visited {
         padding: 0.75rem;
     }
 
+
+    .notification-dropdown {
+    width: 350px;
+    right: 30px;
+    }
+
+
     /*Traffic */
     .traffic-nav li {
         font-size: 18px;
@@ -877,4 +885,3 @@ footer a:visited {
     width: 500px;
 }
 }  
-}

@@ -150,6 +150,5 @@ function showNotifications(event) {
     }
 }
 
-window.addEventListener ('mouseover', showNotifications);
-
+window.addEventListener ('click', showNotifications);
 

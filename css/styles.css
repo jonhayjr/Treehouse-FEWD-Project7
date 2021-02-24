@@ -776,10 +776,8 @@ footer a:visited {
     .members-text {
         padding: 0;
         font-size: 15px;
-        width: 100%;
         margin: 0;
         line-height: 1;
-        width: 500px;
     }
 
     .dateTime {
@@ -800,6 +798,7 @@ footer a:visited {
         text-align: left;
         padding-bottom: 1rem;
         border-bottom: solid 1px lightgray;
+        justify-content: center;
         height: 100px;
     }
 
@@ -908,6 +907,4 @@ footer a:visited {
     font-size: 15px;
 }
 
-.members-container {
-    width: 100%;
-}  
+}

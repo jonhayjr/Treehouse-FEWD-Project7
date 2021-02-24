@@ -232,7 +232,7 @@ function autoComplete() {
         let dropdownLength = dropdown.length;
         let subVal = dropdownText.substr(0, inputLength);
 
-        if (subVal.toLowerCase() === inputValue.toLowerCase()) {
+        if (subVal.toLowerCase() === inputValue.toLowerCase() && inputValue.charAt(0) !== '') {
             //Makes input text bold
             const boldText = `<strong>${subVal}</strong>`;
             const unboldText = dropdownText.replace(subVal, '');

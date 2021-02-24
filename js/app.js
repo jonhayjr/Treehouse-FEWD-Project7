@@ -205,7 +205,7 @@ window.addEventListener ('click', showNotifications);
 
 //User Search Logic  
 const userField = document.getElementById('userField');
-const userNames = ['Dawn Wood', 'Dale Byrd', 'Dan Oliver', 'Victoria Chambers', 'Ryan Dudley', 'Benjamin Moore', 'Rhiannon Johnson', 'Brian Leslie', 'Catherine Jones'];
+const userNames = ['Dawn Wood', 'Dale Byrd', 'Dan Oliver', 'Victoria Chambers', 'Ryan Dudley', 'Benjamin Moore', 'Rhiannon Johnson', 'Brian Leslie', 'Catherine Jones', 'Bradley Stevenson', 'Chris Stizler'];
 const autocompleteDropdown = document.querySelector('.autocomplete-dropdown'); 
 
 //Creates hidden list of user names
@@ -261,8 +261,14 @@ function closeDropdownList(e) {
 }
 
 autocompleteDropdown.addEventListener('click', updateInput);
+
 userField.addEventListener('keyup', autoComplete);
 
+//If user clicks in input field, dropdown appears
+userField.addEventListener('click', autoComplete);
+
+
+//If user clicks out of input field, dropdown is hidden
 window.addEventListener('click', (e) => {
     if (e.target.id !== 'userField') {
         closeDropdownList(e);

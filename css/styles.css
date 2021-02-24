@@ -425,7 +425,7 @@ main {
 
 .members-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 1rem;
     flex-direction: column;
 }
@@ -446,7 +446,7 @@ main {
 .members-text {
     padding: 0.5rem;
     font-size: 16px;
-    width: 75%;
+    width: 100%;
     margin: auto;
     line-height: 1.5;
 }
@@ -775,13 +775,17 @@ footer a:visited {
 
     .members-text {
         padding: 0;
-        font-size: 15px;
+        font-size: 14px;
         margin: 0;
         line-height: 1;
     }
 
     .dateTime {
-        font-size: 11px;
+        font-size: 14px;
+    }
+
+    .members .dateTine {
+        margin: auto;
     }
 
     .member-activity {
@@ -798,7 +802,7 @@ footer a:visited {
         text-align: left;
         padding-bottom: 1rem;
         border-bottom: solid 1px lightgray;
-        justify-content: center;
+        justify-content: flex-start;
         height: 100px;
     }
 
@@ -904,7 +908,10 @@ footer a:visited {
 @media (min-width: 1024px ) {
 .members-text,
 .dateTime {
-    font-size: 15px;
+    font-size: 17px;
 }
-
+.profile-image {
+    width: 50px;
+    height: 50px;
+}
 }

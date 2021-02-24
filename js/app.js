@@ -274,3 +274,49 @@ window.addEventListener('click', (e) => {
         closeDropdownList(e);
     }
 })
+
+//User Settings  
+const sendEmail = document.querySelector('#sendEmail');
+const setPublic = document.querySelector('#setPublic');
+const setTimezone = document.querySelector('#timezone');
+const saveButton = document.querySelector('#save');
+const cancelButton = document.querySelector('#cancel');  
+
+
+function saveSettings() {
+const sendEmailValue = sendEmail.checked ? true : false;
+const setPublicValue = setPublic.checked ? true : false;
+const setTimezoneValue = setTimezone.value;
+//Save to local Storage
+localStorage.setItem('sendEmail', JSON.stringify(sendEmailValue));
+localStorage.setItem('setPublic', JSON.stringify(setPublicValue));
+localStorage.setItem('setTimezone', JSON.stringify(setTimezoneValue));
+}
+
+function getSettings() {
+    //Get Local Storage Settings
+    const sendEmailValue = JSON.parse(localStorage.getItem('sendEmail'));
+    const setPublicValue = JSON.parse(localStorage.getItem ('setPublic'));
+    const setTimezoneValue = JSON.parse(localStorage.getItem('setTimezone'));
+
+    //Update Settings Values
+    sendEmail.checked = sendEmailValue;
+    setPublic.checked = setPublicValue;
+    setTimezone.value = setTimezoneValue;
+}
+
+function clearSettings() {
+    //Clear Local Storage 
+    localStorage.removeItem('sendEmail');
+    localStorage.removeItem('setPublic');
+    localStorage.removeItem('setTimezone');
+
+    //Update settings to default values  
+    sendEmail.checked = true;
+    setPublic.checked = true;
+    setTimezone.value = 'Select a Timezone';
+}
+
+saveButton.addEventListener('click', saveSettings);
+document.addEventListener('DOMContentLoaded', getSettings);
+cancelButton.addEventListener('click', clearSettings);

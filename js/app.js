@@ -205,49 +205,60 @@ window.addEventListener ('click', showNotifications);
 
 //User Search Logic  
 const userField = document.getElementById('userField');
-const userName = document.querySelectorAll('.member-name');
+const userNames = ['Dawn Wood', 'Dale Byrd', 'Dan Oliver', 'Victoria Chambers', 'Ryan Dudley', 'Benjamin Moore', 'Rhiannon Johnson', 'Brian Leslie', 'Catherine Jones'];
 const autocompleteDropdown = document.querySelector('.autocomplete-dropdown'); 
-const autocompleteDropdownList = document.querySelectorAll('.autocomplete-dropdown-li');   
-let dropdownArray = [];
 
-
-function autocompleteUserName() {
-    let inputValue = userField.value;
-    console.log(inputValue);
-    for (let i = 0; i < userName.length; i++) {
-        let inputValueLC = inputValue.toLowerCase();
-        let nameValue = userName[i].innerText;
-        let nameValueLC = userName[i].innerText.toLowerCase();  
-        console.log(nameValueLC);
-        console.log(nameValueLC.includes(inputValueLC));
-        if (nameValueLC.includes(inputValueLC) && inputValue !== '') {
-            createNameItem(nameValue);
-        } else if (!nameValueLC.includes(inputValueLC)) {
-            removeNameItem(nameValue);
-        } 
-    }
-}
-
-function createNameItem(item) {
-    if (!dropdownArray.includes(item)) {
+//Creates hidden list of user names
+function createListItems(arr) {
+    for (let i = 0; i < arr.length; i++) {
         const li = document.createElement('li');
-        li.innerHTML = `<strong>${item}</strong>`;
-        li.classList.add('autocomplete-dropdown-li');
-        dropdownArray.push(item);
+        li.innerText= arr[i];
+        li.style.display = 'none';
         autocompleteDropdown.appendChild(li);
     }
 }
 
-function removeNameItem(item) {
-    const autocompleteDropdownList = document.querySelectorAll('.autocomplete-dropdown-li'); 
-    for (let i = 0; i < autocompleteDropdownList.length; i++) {
-        let li = autocompleteDropdownList[i];
-        let liText = autocompleteDropdownList[i].innerText;
-        if (!liText.includes(item)) {
-            dropdownArray.pop(item);
-            autocompleteDropdown.removeChild(li)
+createListItems(userNames);
+
+//Autocomplete Function
+function autoComplete() {
+    const inputValue = userField.value;
+    const inputLength = inputValue.length;
+    const autocompleteDropdownLI = document.querySelectorAll('.autocomplete-dropdown > li');
+
+    for (let i = 0; i < userNames.length; i++) {
+        let dropdown = autocompleteDropdownLI[i];
+        let dropdownText = dropdown.innerText;
+        let dropdownLength = dropdown.length;
+        let subVal = dropdownText.substr(0, inputLength);
+
+        if (subVal.toLowerCase() === inputValue.toLowerCase()) {
+            //Makes input text bold
+            const boldText = `<strong>${subVal}</strong>`;
+            const unboldText = dropdownText.replace(subVal, '');
+            dropdown.innerHTML = boldText + unboldText;
+            autocompleteDropdownLI[i].style.display = '';
+        } else {
+            autocompleteDropdownLI[i].style.display = 'none';
         }
     }
 }
 
-userField.addEventListener('keyup', autocompleteUserName);
+//Update input field if user selects dropdown value
+function updateInput(e) {
+    if (e.target.nodeName === 'LI') {
+        userField.value = e.target.innerText;
+        closeDropdownList(e);
+    }
+}
+
+//Closes dropdown list
+function closeDropdownList(e) {
+    const listItems = document.querySelectorAll('.autocomplete-dropdown > li');
+    for(let i = 0; i < listItems.length; i++) {
+        listItems[i].style.display = 'none';
+    }
+}
+
+autocompleteDropdown.addEventListener('click', updateInput);
+userField.addEventListener('keyup', autoComplete);

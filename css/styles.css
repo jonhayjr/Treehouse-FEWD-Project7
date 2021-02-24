@@ -775,11 +775,11 @@ footer a:visited {
 
     .members-text {
         padding: 0;
-        font-size: 11px;
+        font-size: 15px;
         width: 100%;
         margin: 0;
         line-height: 1;
-        width: 350px;
+        width: 500px;
     }
 
     .dateTime {
@@ -908,7 +908,9 @@ footer a:visited {
     font-size: 15px;
 }
 
-.members-text {
-    width: 500px;
+.members,
+.member-activity { 
+    max-width: 700px;
 }
+
 }  

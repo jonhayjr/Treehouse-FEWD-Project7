@@ -908,9 +908,6 @@ footer a:visited {
     font-size: 15px;
 }
 
-.members,
-.member-activity { 
-    max-width: 700px;
-}
-
+.members-container {
+    width: 100%;
 }  

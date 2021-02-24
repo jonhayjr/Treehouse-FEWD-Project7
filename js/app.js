@@ -262,3 +262,9 @@ function closeDropdownList(e) {
 
 autocompleteDropdown.addEventListener('click', updateInput);
 userField.addEventListener('keyup', autoComplete);
+
+window.addEventListener('click', (e) => {
+    if (e.target.id !== 'userField') {
+        closeDropdownList(e);
+    }
+})

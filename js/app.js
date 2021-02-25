@@ -192,6 +192,7 @@ send.addEventListener('click', () => {
 const notificationDropdown = document.querySelector('.notification-dropdown');
 const notificationBell = document.querySelector('#notification-bell')
 const notificationAlertDot = document.querySelector('.dot');
+const bell = document.querySelector('.bell');
 
 
 function showNotifications(event) {
@@ -204,8 +205,8 @@ function showNotifications(event) {
     }
 }
 
-window.addEventListener ('click', showNotifications);
-window.addEventListener ('touchstart', showNotifications);
+bell.addEventListener ('click', showNotifications);
+
 
 //User Search Logic  
 const userField = document.getElementById('userField');

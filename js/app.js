@@ -191,11 +191,14 @@ send.addEventListener('click', () => {
 //Notification dropdown   
 const notificationDropdown = document.querySelector('.notification-dropdown');
 const notificationBell = document.querySelector('#notification-bell')
+const notificationAlertDot = document.querySelector('.dot');
 
 
 function showNotifications(event) {
     if (event.target.id === 'notification-bell') {
         notificationDropdown.classList.toggle('show');
+        //Remove green alert dot
+        notificationAlertDot.style.display = 'none';
     } else {
         notificationDropdown.classList.remove('show');
     }
@@ -320,3 +323,4 @@ function clearSettings() {
 saveButton.addEventListener('click', saveSettings);
 document.addEventListener('DOMContentLoaded', getSettings);
 cancelButton.addEventListener('click', clearSettings);
+

@@ -278,6 +278,12 @@ window.addEventListener('click', (e) => {
     }
 })
 
+window.addEventListener('touchstart', (e) => {
+    if (e.target.id !== 'userField') {
+        closeDropdownList(e);
+    }
+})
+
 //User Settings  
 const sendEmail = document.querySelector('#sendEmail');
 const setPublic = document.querySelector('#setPublic');

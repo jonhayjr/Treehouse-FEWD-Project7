@@ -205,6 +205,7 @@ function showNotifications(event) {
 }
 
 window.addEventListener ('click', showNotifications);
+window.addEventListener ('touchstart', showNotifications);
 
 //User Search Logic  
 const userField = document.getElementById('userField');

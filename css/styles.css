@@ -97,6 +97,7 @@ h3 {
 
 h3 {
     font-weight: 400;
+    font-size: 15px;
 }
 
 input,
@@ -212,6 +213,8 @@ nav {
     text-align: center;
     width: 100%;
     align-items: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 nav a {
@@ -239,11 +242,16 @@ main {
 
 .headline {
     padding: 1rem;
+    align-self: center;
 }
 
 .main-header-search {
     background-color: lightgray;
     padding: 1rem;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .main-header-searchbar {
@@ -252,12 +260,13 @@ main {
 }
 
 .main-header-search input {
-    padding: 0.3rem;
+    padding: 0.5rem;
     display: block; 
     border-radius: 5px 5px;  
     width: 100%;
-    align-self:flex-end;
+    align-self: flex-end;
     border: solid 2px rgba(14, 13, 13, 0.431);
+    max-width: 600px;
 }
 
 .main-header-search button {
@@ -265,7 +274,7 @@ main {
     border: none;
     cursor: pointer;
     display: inline-block;
-    font-size: 10px;
+    font-size: 15px;
     position: absolute;
     top: 0;
     right: 0;
@@ -485,6 +494,11 @@ main {
     text-align: left;
 }
 
+.message-heading,
+.settings-heading {
+    margin-bottom: 0.5rem;
+}
+
 .widget-container {
     display: flex;
     flex-direction: column;
@@ -609,7 +623,7 @@ footer a:visited {
   ==================================== */
 @media (min-width: 768px ) {
 .grid-container {
-    grid-template-columns : 55px 1fr;
+    grid-template-columns : 65px 1fr;
     grid-template-areas :
     "header header"
     "navigation main" ;
@@ -683,30 +697,55 @@ footer a:visited {
         grid-column : 1 / span 1 ;
     } 
     .widget-container-full {
-        width: 120vw;
+        width: 140vw;
         margin-left: 1rem;
     }
 
     .widget-container-half {
-        width: 50vw;
+        width: 60vw;
     }
     
     /*Nav*/ 
     nav {
         padding: 0;
-        padding-top: 1rem;
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center;
     }
 
-    nav img {
-        width: 40px;
-        height: 50px;
-        margin-bottom: 1rem;
+    nav .svg {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 2.75rem;
+        align-self: center;
     }
+
+    nav .svg:first-child {
+        margin-top: 0.5rem;
+    }
+
+    nav a {
+        margin-left: 0.5rem;
+        margin-right:  0.5rem;
+    }
+
 
     /*Dashboard*/
-    .main-header-search {
-        flex: 1;
+    .headline {
+        align-self: center;
     }
+
+    .main-header-search input {
+        margin-right: 0;  
+        min-width: 400px;
+        padding: 0.7rem;
+    }
+
+    .main-header-search button {
+        font-size: 20px;
+      }
 
     /*Alert*/
     .alert-banner {
@@ -774,6 +813,14 @@ footer a:visited {
         width: 100%;
         text-align: left;
         padding-right: 2rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .members-heading,
+    .recent-activity-heading {
+        padding-bottom: 0;
+        margin-bottom: 0;
     }
 
     .members-text {
@@ -781,6 +828,11 @@ footer a:visited {
         font-size: 14px;
         margin: 0;
         line-height: 1;
+        min-width: 400px;
+    }
+
+    .members .members-text {
+        min-width: 300px;
     }
 
     .dateTime {
@@ -879,14 +931,14 @@ footer a:visited {
     .settings-heading {
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
 }
 
     .settings-button {
     margin-left: 0;
     margin-right: 0;
     display: flex;
-    margin-top: auto;
+    margin-top: auto;;
 }
     .settings-button button {
     width: 75%;
@@ -900,6 +952,11 @@ footer a:visited {
      align-self: flex-start;
      height: 25px;
      margin-bottom: 1.75rem;
+    }
+
+    #timezone {
+        margin-top: 1rem;
+        margin-bottom: 0.15rem;
     }
 
 /*Footer*/
@@ -916,5 +973,21 @@ footer a:visited {
 .profile-image {
     width: 50px;
     height: 50px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+.message-heading {
+    margin-bottom: 1rem;
+}
+
+.settings-heading {
+    margin-bottom: 0.5rem;
+}
+
+#timezone {
+    margin-bottom: 0.5rem;
 }
 }

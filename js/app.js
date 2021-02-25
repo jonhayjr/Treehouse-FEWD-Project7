@@ -286,13 +286,7 @@ window.addEventListener('click', (e) => {
     if (e.target.id !== 'userField') {
         closeDropdownList(e);
     }
-})
-
-window.addEventListener('touchstart', (e) => {
-    if (e.target.id !== 'userField') {
-        closeDropdownList(e);
-    }
-})
+	})
 
 //User Settings  
 const sendEmail = document.querySelector('#sendEmail');

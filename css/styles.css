@@ -444,10 +444,14 @@ main {
 
 .members-text {
     padding: 0.5rem;
-    font-size: 16px;
+    font-size: 13px;
     width: 100%;
     margin: auto;
     line-height: 1.5;
+}
+
+.dateTime {
+    font-size: 13px;
 }
 
 .member-activity {

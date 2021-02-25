@@ -191,6 +191,7 @@ header {
 .pipe {
     margin-right: 1rem;
     font-size: 25px;
+    color: rgba(211, 211, 211, 0.212);
 }
 
 .header-image {
@@ -201,9 +202,9 @@ header {
 }
 
 header h3 {
-    font-size: 18px;
-    align-self: center;
+    font-size: 16px;
     text-transform: none;
+    align-self: center;
 }
 /*Navigation*/
 nav {
@@ -287,16 +288,18 @@ main {
 .alert {
     background-color: var(--background-primary);
     color: white;
-    padding: 0.5rem;
+    padding: 0.25rem;
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 2rem;
     border-radius: 5px 5px;
+    height: 50px;
 }
 
 .alert-banner {
     display: flex;
     margin-right: 0.5rem;
+    justify-content: center;
 }
 
 .alert-banner-close {
@@ -377,12 +380,12 @@ main {
 .social-container {
     border: solid 1px lightgrey;
     background-color: rgba(211, 211, 211, 0.329);
-    padding: 2rem;
+    padding: 1rem;
     width: 65%;
+    max-width: 400px;
     margin: 1rem auto;
     display: flex;
-    justify-content: space-between;
-    align-content: center;
+    justify-content: flex-start;
 }
 
 .social-heading {
@@ -393,20 +396,21 @@ main {
 .social-image {
     padding: 1rem;
     background-color: var(--background-primary);
-    margin: 0 auto;
     border-radius: 50%;
 }
 
 .social-image .svg {
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     margin: auto;
     vertical-align: middle;
 }
 
 .social-text {
+    margin-left: 0.75rem;
+    text-align: left;
     vertical-align: middle;
-    padding-top: 1rem;
+    padding-top: 0.25rem;
 }
 
 .platform {
@@ -414,7 +418,7 @@ main {
 }
 
 .stat {
-    font-size: 30px;
+    font-size: 35px;
 }
 
 /*Members*/
@@ -645,7 +649,7 @@ footer a:visited {
     }
 
     h3 {
-        font-size: 16px;
+        font-size: 18px;
     }
     .main-header {
         grid-area: dashboard;
@@ -697,7 +701,7 @@ footer a:visited {
         grid-column : 1 / span 1 ;
     } 
     .widget-container-full {
-        width: 140vw;
+        width: 150vw;
         margin-left: 1rem;
     }
 
@@ -778,32 +782,44 @@ footer a:visited {
     /*Social*/
     .social {
         border-top: solid 1px transparent;
-        padding: 1rem;
+        padding: 1rem 1rem 2rem 1rem;
     }
 
     .social-containers {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+        align-content: center;
     }
 
     .social-container {
-        height: auto;
         padding: 0.75rem;
-        flex-basis: auto;
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
+        margin-right: 2rem;
+        height: 110px;
+        width: 350px;
     }
 
     .social-image {
-        height: 65px;
+        height: 75px;
+        width: 75px;
+    }
+
+    .social-image .svg  {
+        height: 50px;
+        width: 45px;
     }
 
     .social-text {
-        padding-left: 1rem;
+        padding-left: 0.5rem;
+    }
+
+    .platform {
+        font-size: 20px;
     }
 
     .stat {
-        font-size: 25px;
+        font-size: 45px;
     }
 
     /*Members*/

@@ -214,7 +214,6 @@ function hideNotifications(event) {
 }
 
 bell.addEventListener ('click', showNotifications);
-bell.addEventListener('mouseout', hideNotifications)
 
 
 //User Search Logic  

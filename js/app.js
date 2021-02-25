@@ -205,7 +205,16 @@ function showNotifications(event) {
     }
 }
 
+function hideNotifications(event) {
+    if (event.target.id !== 'notification-bell') {
+        notificationDropdown.classList.remove('show');
+        //Remove green alert dot
+        notificationAlertDot.style.display = 'none';
+    } 
+}
+
 bell.addEventListener ('click', showNotifications);
+bell.addEventListener('mouseout', hideNotifications)
 
 
 //User Search Logic  

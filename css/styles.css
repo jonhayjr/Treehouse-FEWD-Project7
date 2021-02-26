@@ -1033,11 +1033,11 @@ h3 {
 
 /*Social*/
 .social-containers {
-    justify-content: space-between;
+   justify-content: flex-start;
 }
 
 .social-container {
-    min-width: 500px;
+    min-width: 600px;
     height: auto;
 }
   /*Members*/

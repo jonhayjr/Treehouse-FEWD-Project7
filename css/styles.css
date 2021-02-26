@@ -787,17 +787,18 @@ footer a:visited {
 
     .social-containers {
         display: flex;
-        justify-content: flex-start;
-        margin-left: 0.75rem;
-        margin-right: 0.75rem;
-        align-content: center;
+        justify-content: space-around;
+        margin-left: 0.5rem;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .social-container {
-        padding: 0.75rem;
+        align-self: center;
         margin-right: 2rem;
-        height: 110px;
-        width: 350px;
+        margin-left: 0;
+        flex-basis: 25%;
     }
 
     .social-image {

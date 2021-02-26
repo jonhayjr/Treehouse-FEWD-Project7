@@ -103,7 +103,7 @@ h3 {
 input,
 textarea,
 select {
-    outline-color: none;
+    outline-color: transparent;
     border: solid 2px lightgrey;
     transition: var(--transition-standard);
 }
@@ -142,6 +142,11 @@ header {
     font-size: 25px;
     padding: 0;
     margin: 0;
+}
+
+.header-logo span {
+    font-weight: 300;
+    text-transform: none;
 }
 
 .header-right {
@@ -239,20 +244,22 @@ main {
     display: flex;
     justify-content: space-between;
     padding-bottom: 1rem;
+    width: 100%;
 }
 
 .headline {
     padding: 1rem;
     align-self: center;
+    font-weight: normal;
 }
 
 .main-header-search {
     background-color: lightgray;
     padding: 1rem;
-    flex: 1;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    overflow: hidden;
+    flex-basis: 85%;
 }
 
 .main-header-searchbar {
@@ -264,10 +271,9 @@ main {
     padding: 0.5rem;
     display: block; 
     border-radius: 5px 5px;  
-    width: 100%;
     align-self: flex-end;
     border: solid 2px rgba(14, 13, 13, 0.431);
-    max-width: 600px;
+    width: 50vw;
 }
 
 .main-header-search button {
@@ -288,18 +294,19 @@ main {
 .alert {
     background-color: var(--background-primary);
     color: white;
-    padding: 0.25rem;
+    padding: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 2rem;
     border-radius: 5px 5px;
-    height: 50px;
+    vertical-align: middle;
 }
 
 .alert-banner {
     display: flex;
     margin-right: 0.5rem;
     justify-content: center;
+    width: 100%;
 }
 
 .alert-banner-close {
@@ -627,14 +634,13 @@ footer a:visited {
   ==================================== */
 @media (min-width: 768px ) {
 .grid-container {
-    grid-template-columns : 65px 1fr;
-    grid-template-areas :
+    grid-template-columns: 100px 1fr;
+    grid-template-areas:
     "header header"
     "navigation main" ;
     }
 
     main {
-        grid-template-columns : 50%;
         display: grid;
         grid-template-rows: auto;
         grid-template-areas:
@@ -709,6 +715,33 @@ footer a:visited {
         width: 60vw;
     }
     
+    /*Header*/
+    header {
+        padding: 1.25rem;
+    }
+    
+    header h3 {
+        font-size: 20px;
+    }
+
+    .header-logo {
+        font-size: 30px;
+    }
+
+    .header-image {
+        width: 45px;
+        height: 45px;
+    }
+
+   .bell-icon {
+       height: 45px;
+       width: 25px;
+   }    
+
+   .pipe {
+       font-size: 40px;
+   }
+ 
     /*Nav*/ 
     nav {
         padding: 0;
@@ -720,8 +753,8 @@ footer a:visited {
     }
 
     nav .svg {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         margin-bottom: 2.75rem;
         align-self: center;
     }
@@ -735,15 +768,18 @@ footer a:visited {
         margin-right:  0.5rem;
     }
 
+    nav a:first-child {
+        margin-left: 0;
+    }
+
 
     /*Dashboard*/
     .headline {
         align-self: center;
     }
-
+  
     .main-header-search input {
         margin-right: 0;  
-        min-width: 400px;
         padding: 0.7rem;
     }
 
@@ -751,12 +787,7 @@ footer a:visited {
         font-size: 20px;
       }
 
-    /*Alert*/
-    .alert-banner {
-        padding: 0.75rem;
-    }
-
-
+  
     .notification-dropdown {
     width: 350px;
     right: 30px;
@@ -798,7 +829,7 @@ footer a:visited {
         align-self: center;
         margin-right: 2rem;
         margin-left: 0;
-        flex-basis: 25%;
+        flex-basis: 50%;
     }
 
     .social-image {
@@ -933,8 +964,8 @@ footer a:visited {
     .settings .form-field {
     width: 100%;
     margin-left: 0;
-    margin-bottom: 0.35rem;
     margin-top: 0;
+    padding: 0.75rem;
  }
 
     .settings {
@@ -955,11 +986,10 @@ footer a:visited {
     margin-left: 0;
     margin-right: 0;
     display: flex;
-    margin-top: auto;;
+    margin-top: 0.25rem;
 }
     .settings-button button {
     width: 75%;
-    max-width: 400px;
     padding: 1rem;
     }
 
@@ -983,6 +1013,55 @@ footer a:visited {
 }
 
 @media (min-width: 1024px ) {
+/*Basic Styles*/
+.widget-container-full {
+        width: 250vw;
+}
+
+.widget-container-half {
+        width: 100vw;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 25px;
+}
+/*Header*/
+
+/*Social*/
+.social-containers {
+    justify-content: space-between;
+}
+
+.social-container {
+    min-width: 500px;
+    height: auto;
+}
+  /*Members*/
+  .members,
+  .member-activity {
+      padding-left: 0.5rem;
+      width: 100%;
+      text-align: left;
+      padding-right: 2rem;
+      margin-bottom: 0;
+      padding-bottom: 0;
+  }
+
+  .members-heading,
+  .recent-activity-heading {
+      padding-bottom: 0;
+      margin-bottom: 0;
+  }
+
+.members-text,
+.dateTime {
+      font-size: 20px;
+  }
+
 .members-text,
 .dateTime {
     font-size: 17px;
@@ -992,19 +1071,25 @@ footer a:visited {
     height: 50px;
 }
 
-h3 {
-    font-size: 18px;
-}
-
+/*Message*/
 .message-heading {
     margin-bottom: 1rem;
 }
 
+/*Settings*/
 .settings-heading {
     margin-bottom: 0.5rem;
 }
 
 #timezone {
     margin-bottom: 0.5rem;
+}
+
+.settings-button > button {
+    width: 50%;
+}
+
+.toggle-switch p {
+    font-size: 18px;
 }
 }

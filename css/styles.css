@@ -36,9 +36,13 @@ li {
     list-style: none;
 }
 
+.widget-container-full {
+    margin-left: 1rem;
+}
+
 .widget-container-full, 
 .widget-container-half {
-    width: calc(100% - 0.5rem);
+    width: 95vw;
  }
 
  a {
@@ -118,7 +122,7 @@ select:focus {
   ==================================== */
 .grid-container {
     display: grid;
-    grid-template-columns: 100% ;
+    grid-template-columns: 100%;
     grid-template-rows: auto;
     grid-template-areas:
     "header"
@@ -634,7 +638,7 @@ footer a:visited {
   ==================================== */
 @media (min-width: 768px ) {
 .grid-container {
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 75px 1fr;
     grid-template-areas:
     "header header"
     "navigation main" ;
@@ -642,7 +646,7 @@ footer a:visited {
 
     main {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas:
         "dashboard dashboard"
@@ -700,23 +704,26 @@ footer a:visited {
 
     .traffic, 
     .social {
-        grid-column : 1 / span 2 ;
+        grid-column : 1 / span 2;
     }
     .daily, 
     .members, 
     .message {
-        grid-column : 1 / span 1 ;
+        grid-column : 1 / span 1;
     } 
+
+    .mobile, .activity, .settings {
+        grid-column: 2 / span 1;
+    }
+
     .widget-container-full {
-        width: calc(100% - 1rem);
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin-left: 2rem;
     }
 
     .widget-container-half {
-        width: calc(50%- 1rem);
+        width: 45vw;
     }
-    
+
     /*Header*/
     header {
         padding: 1.25rem;
@@ -795,10 +802,13 @@ footer a:visited {
     right: 30px;
     }
 
-
     /*Traffic */
+    .traffic-header {
+        margin-bottom: 1rem;
+    }
+
     .traffic-nav li {
-        font-size: 18px;
+        font-size: 20px;
         padding-left: 0.75rem;
         padding-right: 0.75rem;
     }
@@ -1019,13 +1029,6 @@ footer a:visited {
 
 @media (min-width: 1024px ) {
 /*Basic Styles*/
-.widget-container-full {
-    width: calc(100% - 0.5rem);
-}
-
-.widget-container-half {
-    width: calc(50%- 0.5rem);
-}
 h2 {
     font-size: 35px;
 }

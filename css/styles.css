@@ -42,7 +42,7 @@ li {
 
 .widget-container-full, 
 .widget-container-half {
-    width: 90vw;
+    width: 95vw;
  }
 
  a {
@@ -258,7 +258,7 @@ main {
 }
 
 .main-header-search {
-    background-color: lightgray;
+    background-color: rgba(211, 211, 211, 0.452);
     padding: 1rem;
     display: flex;
     justify-content: flex-end;
@@ -412,8 +412,8 @@ main {
 }
 
 .social-image .svg {
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     margin: auto;
     vertical-align: middle;
 }
@@ -556,8 +556,8 @@ main {
 
 /*Settings*/
 .settings {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     border-top: solid 1px lightgray;
     display: flex;
     flex-direction: column;
@@ -659,7 +659,7 @@ footer a:visited {
     }
 
     h3 {
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .main-header {
@@ -729,20 +729,20 @@ footer a:visited {
 
     /*Header*/
     header {
-        padding: 1.25rem;
+        padding: 1rem;
     }
     
     header h3 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .header-logo {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .header-image {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
     }
 
    .bell-icon {
@@ -851,7 +851,8 @@ footer a:visited {
 
     .social-container {
         align-self: center;
-        margin-right: 1.5rem;
+        margin-right: 2rem;
+        width: 350px;
     }
 
     /*Members*/
@@ -867,6 +868,8 @@ footer a:visited {
         padding-bottom: 0;
         margin-bottom: 0;
         padding-left: 1rem;
+        margin-top: 0;
+        padding-bottom: 0;
     }
 
     .members-text {
@@ -885,8 +888,6 @@ footer a:visited {
         margin-right: 0;
         padding-right: 0;
     }
-
-  
 
     .dateTime {
         font-size: 10px;
@@ -913,7 +914,7 @@ footer a:visited {
         padding-left: 0.5rem;
         margin-left: 0.25rem;
         padding-top: 0;
-        width: 100%;
+        width: 45vw;
     }
 
     .members-container:last-child {
@@ -927,27 +928,27 @@ footer a:visited {
     }
 
     .member-post {
-       margin-right: 1rem;
         line-height: 1;
-        width: 100%;
+        font-size: 10px;
     }
 
-    .members-text {
-        width: 100%;
+    .member-activity .members-container {
+        margin-left: 0;
+        padding-left: 0.5rem;
     }
 
     .arrow-symbol {
         display: block;
-        font-size: 18px;
-        margin-left: 2rem;
+        font-size: 15px;
+        margin-left: 1rem;
         align-self: center;
     }
 
 /*Message*/
   .message {
       border-right: solid 1px lightgray;
-      padding-left: 2rem;
-      padding-right: 2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
       display: flex;
       justify-content: space-between;
       flex-direction: column;
@@ -982,7 +983,7 @@ footer a:visited {
     width: 100%;
     margin-left: 0;
     margin-top: 0;
-    padding: 0.75rem;
+    padding: 0.5rem;
  }
 
     .settings {
@@ -1018,6 +1019,15 @@ footer a:visited {
      margin-bottom: 1.75rem;
     }
 
+    .switch-light-label {
+        font-size: 14px;
+    }
+
+    .onoffswitch {
+        padding: 0;
+        margin: 0;
+    }
+
     #timezone {
         margin-top: 1rem;
         margin-bottom: 0.15rem;
@@ -1033,4 +1043,12 @@ footer a:visited {
     .widget-container-full {
         width: 93vw;
     }
+
+
+   .members-container  a,
+   .members-container p {
+       font-size: 13px;
+   }
+
+
 }

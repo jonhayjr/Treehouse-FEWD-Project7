@@ -930,12 +930,12 @@ footer a:visited {
     }
 
     .member-post {
-        margin: 0;
+       margin-right: 1rem;
         line-height: 1;
     }
     .arrow-symbol {
         display: block;
-        font-size: 14px;
+        font-size: 15px;
     }
 
 /*Message*/

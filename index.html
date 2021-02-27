@@ -12,11 +12,11 @@
     <title>Web App</title>
 </head>
 <body class="grid-container">
-    <header>
-        <h1 class="header-logo">Your<span>App&trade;</span></h1>
-        <div class="header-right">
+    <header class="header">
+        <h1 class="header__logo">Your<span class="header__logo__unbold">App&trade;</span></h1>
+        <div class="header__right-container">
            <div class="bell">
-            <svg id="notification-bell" class="bell-icon svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg id="notification-bell" class="bell-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
        <style type="text/css">
            .st0{fill:#FFFFFF;}
@@ -33,8 +33,8 @@
        </svg>
             <div class="notifications">
                 <ul class="notification-dropdown">
-                    <li>Victoria Chambers sent you a message.</li>
-                    <li>Please save your user settings.</li>
+                    <li class="dropdown_list">Victoria Chambers sent you a message.</li>
+                    <li class="dropdown_list">Please save your user settings.</li>
                 </ul>
              </div>
             </div>
@@ -44,17 +44,17 @@
         </div>
     </header>
 
-    <nav>
-        <a href="#dashboard">
+    <nav class="nav">
+        <a href="#dashboard" class="nav__link">
             <img class="svg" src="icons/icon-dashboard.svg" alt="Dashboard">
         </a>
-        <a href="#members">
+        <a href="#members" class="nav__link">
             <img class="svg" src="icons/icon-members.svg" alt="Members">
         </a>
-        <a href="#visits">
+        <a href="#visits" class="nav__link">
             <img class="svg" src="icons/icon-visits.svg" alt="Visits">
         </a>
-        <a href="#settings">
+        <a href="#settings" class="nav__link">
             <img class="svg" src="icons/icon-settings.svg" alt="Settings">
         </a>
     </nav>
@@ -163,8 +163,8 @@
         </div>
         </section>
         <!-- new members widget -->
-        <section class="members" id="members">
-            <h3 class="members-heading">New Members</h3>
+        <section class="new-members" id="members">
+            <h3 class="new-members__heading">New Members</h3>
             <div class="members-container">
                 <img src="images/member-1.jpg" alt="Victoria Chambers Profile"
                 class="profile-image">
@@ -172,7 +172,7 @@
                     <p class="member-name">Victoria Chambers</p>
                     <a href="#">victoria.chambers80@example.com</a>
                 </div>
-                <p class="dateTime">02/16/21</p>
+                <p class="datetime">02/16/21</p>
             </div>
             <div class="members-container">
                 <img src="images/member-2.jpg" alt="Dale Byrd Profile"
@@ -181,7 +181,7 @@
                     <p class="member-name">Dale Byrd</p>
                     <a href="#">dale.bryd52@example.com</a>
                 </div>
-                <p class="dateTime">02/15/21</p>
+                <p class="datetime">02/15/21</p>
             </div>
             <div class="members-container">
                 <img src="images/member-3.jpg" alt="Dawn Wood Profile"
@@ -190,7 +190,7 @@
                     <p class="member-name">Dawn Wood</p>
                     <a href="#">dawn.wood16@example.com</a>
                 </div>
-                <p class="dateTime">02/15/21</p>
+                <p class="datetime">02/15/21</p>
             </div>
             <div class="members-container">
                 <img src="images/member-4.jpg" alt="Dan Oliver Profile"
@@ -199,12 +199,12 @@
                     <p class="member-name">Dan Oliver</p>
                     <a href="#">dan.oliver82@example.com</a>
                 </div>
-                <p class="dateTime">02/16/21</p>
+                <p class="datetime">02/16/21</p>
             </div>
         </section>   
         <!-- Recent Activity -->
         <section class="member-activity">
-            <h3 class="recent-activity-heading">Recent Activity</h3>
+            <h3 class="member-activity-heading">Recent Activity</h3>
             <div class="members-container">
                 <img src="images/member-1.jpg" alt="Victoria Chambers Profile"
                 class="profile-image">
@@ -212,7 +212,7 @@
                     <div class="member-post">
                         <p class="post-text">Victoria Chambers commented on YourApp's SEO Tips</p>
                     </div>
-                    <p class="dateTime">4 hours ago</p>
+                    <p class="datetime">4 hours ago</p>
                 </div>
                 <p class="arrow-symbol">&rang;</p>
             </div>
@@ -223,7 +223,7 @@
                     <div class="member-post">
                         <p class="post-text">Dale Byrd liked the post Facebook's Changes for 2021</p>
                     </div>
-                    <p class="dateTime">5 hours ago</p>
+                    <p class="datetime">5 hours ago</p>
                 </div>
                 <p class="arrow-symbol">&rang;</p>
             </div>
@@ -234,7 +234,7 @@
                     <div class="member-post">
                         <p class="post-text">Dawn Wood commented on Facebook's Changes for 2021</p>
                     </div>
-                    <p class="dateTime">3 hours ago</p>
+                    <p class="datetime">3 hours ago</p>
                 </div>
                 <p class="arrow-symbol">&rang;</p>
             </div>
@@ -245,14 +245,14 @@
                     <div class="member-post">
                         <p class="post-text">Dan Oliver posted YourApp's SEO Tips</p>
                     </div>
-                    <p class="dateTime">2 days ago</p>
+                    <p class="datetime">2 days ago</p>
                 </div>
                 <p class="arrow-symbol">&rang;</p>
             </div>
         </section>
         <!-- messaging widget -->
         <section class="message">
-            <h3 class="message-heading">Message User</h3>
+            <h3 class="message__heading">Message User</h3>
             <form class="widget-container" autocomplete="off">
                 <input type="text" placeholder="Search for user"
                 class="form-field" id="userField">
@@ -267,7 +267,7 @@
         </section>
         <!-- local settings widget -->
         <section class="settings" id="settings">
-            <h3 class="settings-heading">Settings</h3>
+            <h3 class="settings__heading">Settings</h3>
             <!-- custom CSS toggle code-->
             <div class="toggle-switch">
                 <p class="switch-light-label">Send Email Notification</p>

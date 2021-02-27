@@ -325,8 +325,8 @@ function clearSettings() {
     localStorage.removeItem('setTimezone');
 
     //Update settings to default values  
-    sendEmail.checked = true;
-    setPublic.checked = true;
+    sendEmail.checked = false;
+    setPublic.checked = false;
     setTimezone.value = 'Select a Timezone';
 }
 

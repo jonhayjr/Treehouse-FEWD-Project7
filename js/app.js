@@ -313,9 +313,9 @@ function getSettings() {
     const setTimezoneValue = JSON.parse(localStorage.getItem('setTimezone'));
 
     //Update Settings Values
-    sendEmail.checked = sendEmailValue;
-    setPublic.checked = setPublicValue;
-    setTimezone.value = setTimezoneValue;
+    sendEmail.checked = sendEmailValue ? sendEmailValue : false;
+    setPublic.checked = setPublicValue ? setPublicValue : false;
+    setTimezone.value = setTimezoneValue ? setTimezoneValue : 'Select a Timezone';
 }
 
 function clearSettings() {

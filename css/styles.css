@@ -447,7 +447,7 @@ main {
 }
 
 .new-members__heading,
-.member-activity-heading {
+.member-activity__heading {
     text-align: left;
     padding: 1rem;
 }

@@ -19,15 +19,33 @@ alertBanner.addEventListener('click', e => {
 
 //Traffic Chart  
 const trafficCanvas = document.querySelector('#traffic-chart');
-const hourlyTraffic = [150, 300, 350, 500, 300, 400, 300, 450, 650, 300,
-    2500];
- const dailyTraffic = [350, 650, 500, 1000, 750, 950, 600, 900, 1100, 750,
-    1500];
-const weeklyTraffic = [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
-    2500];
 
-const monthlyTraffic = [1000, 2100, 1200, 2300, 1700, 1890, 1500, 2000, 2200, 1760,
-        2500];
+const hourlyTraffic = {
+    data: [150, 300, 350, 500, 300, 400, 300, 450, 650, 300, 2500],
+    labels: ["5-10", "15-25", "35-10", "12-24", "29-35", "26-34", "13-5",
+    "10-25", "17-25", "28-34", "35-51"]
+};
+
+const dailyTraffic = {
+    data: [350, 650, 500, 1000, 750, 950, 600, 900, 1100, 750, 1500],
+    labels: ["15-35", "35-45", "50-70", "24-48", "39-67", "45-30", "23-15",
+    "25-10", "27-35", "38-24", "45-61"]
+};
+
+const weeklyTraffic = {
+    data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
+    2500],
+    labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
+    "4-10", "11-17", "18-24", "25-31"]
+};
+
+const monthlyTraffic = {
+    data: [1000, 2100, 1200, 2300, 1700, 1890, 1500, 2000, 2200, 1760, 2500],
+    labels: ["25-32", "33-39", "40-15", "16-22", "23-49", "50-36", "57-31",
+    "24-20", "21-37", "28-34", "35-41"]
+};
+
+
 const trafficNav = document.querySelector('.traffic-nav');
 
 let trafficData = {
@@ -67,13 +85,17 @@ let trafficChart = new Chart(trafficCanvas, {
 //Update Traffic Chart Based on User Selection
 function updateTrafficFrequency(frequency) {
         if (frequency === 'Hourly') {
-            trafficData.datasets[0].data = hourlyTraffic;
+            trafficData.datasets[0].data = hourlyTraffic.data;
+            trafficData.labels = hourlyTraffic.labels;
         } else if (frequency === 'Daily') {
-            trafficData.datasets[0].data = dailyTraffic;
+            trafficData.datasets[0].data = dailyTraffic.data;
+            trafficData.labels = dailyTraffic.labels;
         } else if (frequency === 'Weekly') {
-            trafficData.datasets[0].data = weeklyTraffic;
+            trafficData.datasets[0].data = weeklyTraffic.data;
+            trafficData.labels = weeklyTraffic.labels;
         } else if (frequency === 'Monthly') {
-            trafficData.datasets[0].data = monthlyTraffic;
+            trafficData.datasets[0].data = monthlyTraffic.data;
+            trafficData.labels = monthlyTraffic.labels;
         }
     
         trafficChart = new Chart(trafficCanvas, {

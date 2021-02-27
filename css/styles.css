@@ -42,7 +42,7 @@ li {
 
 .widget-container-full, 
 .widget-container-half {
-    width: 95vw;
+    width: 90vw;
  }
 
  a {
@@ -278,6 +278,7 @@ main {
     align-self: flex-end;
     border: solid 2px rgba(14, 13, 13, 0.431);
     width: 45vw;
+    max-width: 300px;
 }
 
 .main-header-search button {
@@ -638,7 +639,8 @@ footer a:visited {
   ==================================== */
 @media (min-width: 768px ) {
 .grid-container {
-    grid-template-columns: 75px 1fr;
+    grid-template-columns: 65px minmax(0, 1fr);
+    grid-template-rows: auto;
     grid-template-areas:
     "header header"
     "navigation main" ;
@@ -646,8 +648,8 @@ footer a:visited {
 
     main {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-columns: 50% 50%;
+        overflow: hidden;
         grid-template-areas:
         "dashboard dashboard"
         "alert alert"
@@ -660,12 +662,14 @@ footer a:visited {
     }
 
     h3 {
-        font-size: 18px;
+        font-size: 15px;
     }
+
     .main-header {
         grid-area: dashboard;
     }
 
+  
     .alert {
         grid-area: alert;
     }
@@ -712,16 +716,18 @@ footer a:visited {
         grid-column : 1 / span 1;
     } 
 
-    .mobile, .activity, .settings {
-        grid-column: 2 / span 1;
+    .mobile, 
+    .activity, 
+    .settings {
+      grid-column: 2 / span 1;
     }
 
     .widget-container-full {
-        margin-left: 2rem;
+        width: 90vw;
     }
 
     .widget-container-half {
-        width: 45vw;
+        width: 40vw;
     }
 
     /*Header*/
@@ -762,8 +768,8 @@ footer a:visited {
     }
 
     nav .svg {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         margin-bottom: 2.75rem;
         align-self: center;
     }
@@ -808,14 +814,15 @@ footer a:visited {
     }
 
     .traffic-nav li {
-        font-size: 20px;
+        font-size: 16px;
         padding-left: 0.75rem;
         padding-right: 0.75rem;
     }
 
     .daily,
     .mobile {
-        padding-left: 1rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
         border-top: solid 1px lightgray;
         border-bottom: solid 1px lightgray;
     }
@@ -827,89 +834,75 @@ footer a:visited {
     /*Social*/
     .social {
         border-top: solid 1px transparent;
-        padding: 1rem 1rem 2rem 1rem;
+        padding: 1rem;
+    }
+
+    .social-heading {
+        padding: 0;
     }
 
     .social-containers {
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin-left: 0.5rem;
+        justify-content: center;
+        align-content: center;
+        margin-left: 1rem;
         margin-right: 0;
         padding-left: 0;
         padding-right: 0;
+        padding-top: 0;
     }
 
     .social-container {
         align-self: center;
-        margin-right: 3rem;
-        margin-left: 0;
-        width: calc(100% / 3 - 3rem);
-    }
-
-    .social-image {
-        height: 75px;
-        width: 75px;
-    }
-
-    .social-image .svg  {
-        height: 50px;
-        width: 45px;
-    }
-
-    .social-text {
-        padding-left: 0.5rem;
-    }
-
-    .platform {
-        font-size: 20px;
-    }
-
-    .stat {
-        font-size: 45px;
+        margin-right: 1.5rem;
     }
 
     /*Members*/
     .members,
     .member-activity {
-        padding-left: 0.5rem;
-        width: 100%;
         text-align: left;
         padding-right: 2rem;
-        margin-bottom: 0;
-        padding-bottom: 0;
+        padding-bottom: 0.25rem;
     }
 
     .members-heading,
     .recent-activity-heading {
         padding-bottom: 0;
         margin-bottom: 0;
+        padding-left: 1rem;
     }
 
     .members-text {
         padding: 0;
-        font-size: 14px;
+        font-size: 10px;
         margin: 0;
         line-height: 1;
-        min-width: 400px;
     }
 
     .members .members-text {
-        min-width: 300px;
+        font-size: 10px;
+    }
+
+    .member-activity 
+    .members-text {
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    .member-post {
+        width: 275px;
     }
 
     .dateTime {
-        font-size: 14px;
+        font-size: 10px;
     }
 
-    .members .dateTine {
-        margin: auto;
-    }
-
+    
     .member-activity {
         border-top: solid 1px transparent;
-        padding-left: 1rem;
+        padding-left: 0.25rem;
     }
+
 
     .members {
         border-right: solid 1px lightgray;
@@ -917,28 +910,29 @@ footer a:visited {
 
     .members-container {
         flex-direction: row;
-        text-align: left;
-        padding-bottom: 1rem;
+        padding-bottom: 0rem;
         border-bottom: solid 1px lightgray;
-        justify-content: flex-start;
-        height: 100px;
+        justify-content: space-around;
+        height: 55px;
+        padding-left: 0.5rem;
+        margin-left: 0.25rem;
+        padding-top: 0;
     }
 
     .members-container:last-child {
         border-bottom: solid 1px transparent;
     }
-
-
     .profile-image {
         margin: 0;
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         margin-right: 0.5rem;
     }
-  
 
     .icon-chevron-right {
         display: block;
+        margin-bottom: 1rem;
+        
      }
 
 /*Message*/
@@ -984,8 +978,8 @@ footer a:visited {
  }
 
     .settings {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1028,67 +1022,5 @@ footer a:visited {
 }
 
 @media (min-width: 1024px ) {
-/*Basic Styles*/
-h2 {
-    font-size: 35px;
-}
 
-h3 {
-    font-size: 25px;
-}
-/*Header*/
-
-/*Social*/
-  /*Members*/
-  .members,
-  .member-activity {
-      padding-left: 0.5rem;
-      width: 100%;
-      text-align: left;
-      padding-right: 2rem;
-      margin-bottom: 0;
-      padding-bottom: 0;
-  }
-
-  .members-heading,
-  .recent-activity-heading {
-      padding-bottom: 0;
-      margin-bottom: 0;
-  }
-
-.members-text,
-.dateTime {
-      font-size: 20px;
-  }
-
-.members-text,
-.dateTime {
-    font-size: 17px;
-}
-.profile-image {
-    width: 50px;
-    height: 50px;
-}
-
-/*Message*/
-.message-heading {
-    margin-bottom: 1rem;
-}
-
-/*Settings*/
-.settings-heading {
-    margin-bottom: 0.5rem;
-}
-
-#timezone {
-    margin-bottom: 0.5rem;
-}
-
-.settings-button > button {
-    width: 50%;
-}
-
-.toggle-switch p {
-    font-size: 18px;
-}
 }

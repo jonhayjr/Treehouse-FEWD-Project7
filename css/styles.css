@@ -886,11 +886,7 @@ footer a:visited {
         padding-right: 0;
     }
 
-    .member-post {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  
 
     .dateTime {
         font-size: 10px;
@@ -917,6 +913,7 @@ footer a:visited {
         padding-left: 0.5rem;
         margin-left: 0.25rem;
         padding-top: 0;
+        width: 100%;
     }
 
     .members-container:last-child {
@@ -932,10 +929,18 @@ footer a:visited {
     .member-post {
        margin-right: 1rem;
         line-height: 1;
+        width: 100%;
     }
+
+    .members-text {
+        width: 100%;
+    }
+
     .arrow-symbol {
         display: block;
-        font-size: 15px;
+        font-size: 18px;
+        margin-left: 2rem;
+        align-self: center;
     }
 
 /*Message*/

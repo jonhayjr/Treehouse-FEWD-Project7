@@ -491,12 +491,9 @@ main {
     color: var(--background-primary);
  }
 
- .icon-chevron-right {
+ .arrow-symbol {
     display: none;
- }
-
- .arrow {
-    fill: var(--background-primary);
+    color: var(--background-primary);
  }
 
 /*Message*/
@@ -890,11 +887,14 @@ footer a:visited {
     }
 
     .member-post {
-        width: 275px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .dateTime {
         font-size: 10px;
+        line-height: 1;
     }
 
     
@@ -929,11 +929,14 @@ footer a:visited {
         margin-right: 0.5rem;
     }
 
-    .icon-chevron-right {
+    .member-post {
+        margin: 0;
+        line-height: 1;
+    }
+    .arrow-symbol {
         display: block;
-        margin-bottom: 1rem;
-        
-     }
+        font-size: 14px;
+    }
 
 /*Message*/
   .message {
@@ -1022,5 +1025,7 @@ footer a:visited {
 }
 
 @media (min-width: 1024px ) {
-
+    .widget-container-full {
+        width: 93vw;
+    }
 }

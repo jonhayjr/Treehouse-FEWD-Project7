@@ -312,11 +312,12 @@ main {
     margin: 0 1rem 2rem 1rem;
     border-radius: 5px 5px;
     vertical-align: middle;
+    font-size: 12px;
 }
 
 .alert-banner {
     display: flex;
-    margin-right: 0.5rem;
+    margin-right: 0.25rem;
     justify-content: center;
     width: 100%;
 }
@@ -677,6 +678,7 @@ footer a:visited {
   
     .alert {
         grid-area: alert;
+        font-size: 15px;
     }
 
     .traffic {
@@ -728,7 +730,7 @@ footer a:visited {
     }
 
     .widget-container-full {
-        width: 88vw;
+        width: 87vw;
     }
 
     .widget-container-half {

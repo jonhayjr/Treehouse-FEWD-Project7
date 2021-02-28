@@ -19,6 +19,7 @@ alertBanner.addEventListener('click', e => {
 
 //Traffic Chart  
 const trafficCanvas = document.querySelector('#traffic-chart');
+const trafficNav = document.querySelector('.traffic-nav');
 
 const hourlyTraffic = {
     data: [150, 300, 350, 500, 300, 400, 300, 450, 650, 300, 2500],
@@ -44,9 +45,6 @@ const monthlyTraffic = {
     labels: ["25-32", "33-39", "40-15", "16-22", "23-49", "50-36", "57-31",
     "24-20", "21-37", "28-34", "35-41"]
 };
-
-
-const trafficNav = document.querySelector('.traffic-nav');
 
 let trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",

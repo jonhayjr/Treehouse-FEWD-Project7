@@ -208,7 +208,8 @@ send.addEventListener('click', () => {
     }
     });
 
-//Notification dropdown   
+//Notification dropdown 
+const body = document.querySelector('body');
 const notificationDropdown = document.querySelector('.notification-dropdown');
 const notificationBell = document.querySelector('#notification-bell')
 const notificationAlertDot = document.querySelector('.dot');
@@ -217,7 +218,7 @@ const bell = document.querySelector('.bell');
 
 function showNotifications(event) {
     if (event.target.id === 'notification-bell') {
-        notificationDropdown.classList.toggle('show');
+        notificationDropdown.classList.add('show');
         //Remove green alert dot
         notificationAlertDot.style.display = 'none';
     } else {
@@ -228,12 +229,11 @@ function showNotifications(event) {
 function hideNotifications(event) {
     if (event.target.id !== 'notification-bell') {
         notificationDropdown.classList.remove('show');
-        //Remove green alert dot
-        notificationAlertDot.style.display = 'none';
     } 
 }
 
-bell.addEventListener ('click', showNotifications);
+body.addEventListener ('click', showNotifications);
+body.addEventListener('mouseout', hideNotifications);
 
 
 //User Search Logic  

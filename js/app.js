@@ -218,7 +218,7 @@ const bell = document.querySelector('.bell');
 
 function showNotifications(event) {
     if (event.target.id === 'notification-bell') {
-        notificationDropdown.classList.add('show');
+        notificationDropdown.classList.toggle('show');
         //Remove green alert dot
         notificationAlertDot.style.display = 'none';
     } else {
